@@ -38,25 +38,18 @@ body{
 }
 
 .wrapper{
-  position: absolute;
-  width: 100%;
-  top:0;
-  left:0;
 }
 
 .header__wrapper {
   width: 100%;
-  top:0;
-  left:0;
-  z-index: 50;
 }
 .header__container {
+  padding: 60px 0px 0px 150px;
 }
 .header__body {
   display: flex;
   align-items: center;
-  padding: 60px 150px 0px 150px;
-  min-height: 66px
+  justify-content: space-between;
 }
 .header__main {
   margin: 10px  0px 0px 0px;
