@@ -50,10 +50,17 @@ body{
   font-size: 64px;
   line-height: 77px;
 }
+
+.__logo{
+  background:url(../fonts/Sss.svg) center no-repeat;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 /*ШАПКА САЙТА==================================*/
 
 .header__body {
-  padding-top: 70px;
+  margin-top: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -214,6 +221,7 @@ body{
   font-weight: 700;
   font-size: 22px;
   line-height: 27px;
+  background-color: #F7FDFF;
 }
 .JS__box{
   margin-right: 21px;
@@ -238,7 +246,7 @@ body{
   width: 440px;
   background-color: #4285F4;
   border-radius:198.5px 0px 198.5px 198.5px;
-  box-shadow: 25px 25px 0px 10px lightblue;
+  box-shadow: 42px 13px 0px -8px #ecf3ff;
 }
 .figura_other1 {
   position: absolute;
@@ -358,17 +366,23 @@ body{
 .couses__card:first-child{
   margin-left: 0;
 }
-.card-course__img{
+.card-course{
   display: inline-block;
   overflow: hidden;
-}
-.card-course__img img{
   border-radius: 10px;
+}
+.course_img{
+/*Дальше код убирает лишние контексты, это происходит из-за трансформируемых элементов*/
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
   transition: 1s;
-  display: block;
 }
 
-.card-course__img img:hover{
+.card-course:hover .course_img{
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 .card-course__content {
@@ -453,18 +467,18 @@ body{
   font-weight: 700;
 }
 .mentor_items {
-  margin-top: 32px;
-}
-.mentor__row{
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 76px;
+  margin-top: 32px;
 }
 .box{
-  margin-left: 20px;
+  margin-right: 32px;
 }
-.box:first-child{
-  margin-left: 0px;
+.box:nth-child(3){
+  margin-right: 0px;
+}
+.box:last-child{
+  margin-right: 0px;
 }
 .__box {
   margin-top: 28px;
@@ -486,6 +500,7 @@ body{
 /*ПОДВАЛ=====================================================*/
 .footer {
   background: #00056B;
+  margin-top: 108px;
 }
 .footer__container {
   padding-top: 108px;
@@ -518,7 +533,7 @@ body{
   line-height: 29px;
 }
 .footer__text {
-  margin: 30px 0px 23px 0px;
+  margin: 48px 0px 23px 0px;
   color: #FDFDFD;
   font-weight: 400;
   font-size: 18px;
@@ -543,6 +558,12 @@ body{
 }
 .menu-footer {
   display: flex;
+}
+.media-footer__item img{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
 }
 .menu-footer__column {
   margin-right: 50px;
@@ -572,21 +593,20 @@ body{
   font-size: 16px;
   line-height: 26px;
 }
-.email__form {
+.test input{
   background: #FDFDFD;
   opacity: 0.2;
   border-radius: 8px;
   display: flex;
   font-size: 16px;
-  align-items: center;
-  justify-content: center;
-  width: 255px;
+  padding: 8px 25px;
+  line-height: 24px;
 }
-.form_text{
-  margin: auto;
+.test{
+  display: flex;
 }
-.img_button img{
-  background-color: black;
+.test img{
+  margin-left: -39.5px;
 }
 .footer__end{
   margin: 95px 0px 34px 0; 
@@ -594,7 +614,7 @@ body{
   justify-content: center;
 }
 .footer__end p {
-  color: white;
+  color: #FDFDFD;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
