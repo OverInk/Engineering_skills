@@ -132,7 +132,7 @@ body{
 
 .path1_skills {
   display: flex;
-  padding-top: 78px;
+  margin-top: 78px;
 }
 .text-content__title {
   color: #303030;
@@ -282,7 +282,7 @@ body{
 
 /*КОНТЕНТ-COMPANY=======================================*/
 .page_company{
-  padding-top: 69px;
+  margin-top: 69px;
 }
 .company_container {
   background: #F5F9FF;
@@ -441,7 +441,7 @@ body{
 
 /*КОНТЕНТ - MENTORS===========================================*/
 .mentor__container{
-  padding-top: 177px;
+  margin-top: 177px;
 }
 .mentor__body {
   display: flex;
