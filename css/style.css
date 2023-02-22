@@ -26,7 +26,7 @@ html, body{
 input, button,textarea{font-family: inherit;}
 
 input::-ms-clear{display: none;}
-// button{cursor: pointer;}
+button{cursor: pointer;}
 /*Возможно когда-нибудь будет ситуация, когда нуно убрать крестик, который появляется в браузере Explore в поисковике. Если она не нужна, то убрать эту команду*/ 
 button::-moz-focus-inner{padding: 0; border:0;}
 a, a:visited{text-decoration: none;}
@@ -84,10 +84,12 @@ body{
 }
 .menu__list {
   display: flex;
-  flex-wrap: wrap;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 .menu__item {
-  margin: 19.5px 24px;
+  margin-left: 24px;
 }
 
 .menu__link {
@@ -103,8 +105,10 @@ body{
 
 .sign__list {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
 }
+
 .path2{
   background: white;
   color: #1A21BC;
@@ -124,6 +128,7 @@ body{
   margin-left: 30px;
 }
 
+
 /*КОНТЕНТ-ADVANCE==================================*/
 
 .main {
@@ -133,6 +138,7 @@ body{
 .path1_skills {
   display: flex;
   margin-top: 78px;
+  flex-wrap: wrap;
 }
 .text-content__title {
   color: #303030;
@@ -200,7 +206,7 @@ body{
   justify-content: flex-start;
 }
 .JS-body{
-  width: 653px;
+  width: 100%;
   height: 114px;
   background-color: #F7FDFF;
   display: flex;
@@ -256,7 +262,7 @@ body{
   background-color: #FFC700;
   border-radius: 50%;
   top: 515px;
-  left: 160px;
+  left: 35%;
 }
 
 .figura_other2 {
@@ -267,7 +273,7 @@ body{
   background-color:#1A21BC;
   border-radius: 50%;
   top: 515px;
-  left: 190px;
+  left: 43%;
 }
 .figura_other3 {
   position: absolute;
@@ -301,6 +307,7 @@ body{
 .company_item {
   display: flex;
   margin-top: 42px;
+  flex-wrap: wrap;
 }
 .company__icon {
   align-self: center;
@@ -311,12 +318,13 @@ body{
 }
 /*КОНТЕНТ - COURSES============================================*/
 .courses_container{
-  padding-top: 49px;
+  margin-top: 49px;
 }
 .courses__body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 .course__button{
   background-color: #1A21BC;
@@ -357,14 +365,15 @@ body{
 .couses__cards {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .couses__card{
-  margin-left: 25px;
+  margin-right: 25px;
   position: relative;
   top: 0;
 }
-.couses__card:first-child{
-  margin-left: 0;
+.couses__card:last-child{
+  margin-right: 0;
 }
 .card-course{
   display: inline-block;
@@ -388,9 +397,9 @@ body{
 .card-course__content {
   display: flex;
   flex-direction: column;
-  align-content: space-between;
+  flex-wrap: wrap;
   background: white;
-  width: 263px;
+  width: 100%;
   color: #101010;
   box-shadow: 30px 30px 55px 30px #e1e1e1;
   border-radius: 10px;
@@ -416,14 +425,12 @@ body{
   font-size: 16px;
   line-height: 19px;
 }
-.card-course__title{
-  margin-left: 10.5px;
-  margin-top: 9px;
-}
 .card-course__title {
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
+  margin-left: 10.5px;
+  margin-top: 9px;
 }
 .card-course__text {
   display: flex;
@@ -447,6 +454,7 @@ body{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
 .mentor__button {
   background-color: #1A21BC;
@@ -469,16 +477,18 @@ body{
 .mentor_items {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 32px;
+  margin: 32px 0;
 }
 .box{
   margin-right: 32px;
 }
-.box:nth-child(3){
-  margin-right: 0px;
-}
-.box:last-child{
-  margin-right: 0px;
+@media screen and (min-width: 1440px){
+	.box:nth-child(3){
+		margin-right: 0px;
+	}
+	.box:last-child{
+		margin-right: 0px;
+	}
 }
 .__box {
   margin-top: 28px;
@@ -500,7 +510,7 @@ body{
 /*ПОДВАЛ=====================================================*/
 .footer {
   background: #00056B;
-  margin-top: 108px;
+  padding-top: 108px;
 }
 .footer__container {
   padding-top: 108px;
@@ -509,6 +519,7 @@ body{
 }
 .footer_items{
   display: flex;
+  flex-wrap: wrap;
 }
 .footer__main {
   display: flex;
@@ -593,7 +604,11 @@ body{
   font-size: 16px;
   line-height: 26px;
 }
-.test input{
+.input_container{
+  display: flex;
+  position: relative;
+}
+.input_container input{
   background: #FDFDFD;
   opacity: 0.2;
   border-radius: 8px;
@@ -602,11 +617,11 @@ body{
   padding: 8px 25px;
   line-height: 24px;
 }
-.test{
-  display: flex;
-}
-.test img{
-  margin-left: -39.5px;
+.input_container img{
+	position: absolute;
+	cursor: pointer;
+	top:11.5px;
+	right: 12.5px;
 }
 .footer__end{
   margin: 95px 0px 34px 0; 
@@ -618,4 +633,169 @@ body{
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
+}
+
+@media screen and (max-width: 1280px) {
+	.__container {
+		padding: 0px 100px 0px 100px;
+	}
+	.card-course__title {
+		margin-right: 33px;
+	}
+
+	.card-course__name {
+  		margin: 9px 20px 0px 11px;
+	}
+	.mentor_items {
+		justify-content: center;
+		align-items: center;
+		column-gap: 32px;
+	}
+	.box{
+		margin-bottom: 40px;
+	}
+
+}
+
+
+@media screen and (max-width: 992px) {
+	.__container {
+		padding: 0px 80px 0px 85px;
+	}
+	.path21{
+		width: 140px;
+	  	height: 57px;
+	}
+	.path2{
+	  	width: 140px;
+	  	height: 57px;
+	}
+	.header__menu {
+	  	margin-left: 0px;
+	}
+	.text-content__title {
+	  	font-size: 70px;
+	  	line-height: 90px;
+	}
+	.figura_main{
+		margin-left: 17px;
+		width: 381px;
+	}
+	.mark-text {
+		margin-left: 5px;
+	}
+	.JS__box{
+		margin-right: 15px;
+		width: 135px;
+		height: 47px;
+	}
+	.course__link {
+		font-size: 20px;
+	}
+	.card-course__title{
+		font-size: 16px;
+	}
+	.card-course__text {
+		font-size: 12px;
+	}
+	.JS-body{
+		justify-content: space-between;
+		flex-direction: column;
+		padding-bottom: 20px;
+	}
+	.company__icon {
+		margin-left: 40px;
+	}
+	.box:nth-child(even){
+		margin-right: 0px;
+	}
+	.footer__menu {
+		margin-left: 145px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.__title{
+		font-size: 53px;
+    	line-height: 64px;
+	}
+	.menu__item{
+		margin-left: 41px;
+	}
+	.header__sign{
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+	.company__icon {
+		margin-left: 24px;
+		margin-bottom: 15px;
+	}
+	.company__icon:last-child {
+		margin-left: 0px;
+	}
+	.course__link {
+		font-size: 15px;
+	}
+	.choise__item {
+		margin-left: 25px;
+	}
+	.card-course{
+		margin-bottom: 20px;
+	}
+	.box{
+		margin-right: 0px;
+	}
+	.course__button{
+	  	width: 166px;
+	  	height: 55px;
+	}
+	.mentor__button {
+	  	width: 220px;
+	  	height: 55px;
+	}
+	.footer__menu {
+		margin-left: 50px;
+	}
+	.footer__email{
+		margin-top: 40px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.__title{
+		font-size: 50px;
+    	line-height: 59px;
+	}
+	.header__body{
+		flex-wrap: nowrap;
+	}
+	.header__menu {
+		display: none;
+	}
+	.mark-text {
+		margin-left: 2px;
+	}
+	.company__icon:nth-child(4) {
+		margin-left: 0px;
+	}
+	.company__icon:last-child {
+		margin-left: 24px;
+	}
+	.courses__body {
+	  	flex-direction: column;
+	}
+	.couses__cards {
+		justify-content: center;
+	}
+	.mentor__container{
+	  	margin-top: 70px;
+	}
+	.mentor__body {
+		justify-content: center;
+	}
+	.footer__menu {
+		margin-left: 0px;
+		margin-top: 25px;
+	}
 }
