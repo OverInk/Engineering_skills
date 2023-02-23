@@ -292,7 +292,7 @@ body{
   background: #F5F9FF;
   display: flex;
   flex-direction: column;
-  height: 220px;
+  height: 100%
 }
 .company__title {
   margin-top: 56px;
@@ -994,6 +994,9 @@ body{
 }
 
 @media screen and (max-width: 540px) {
+	.__container {
+		padding: 0px 30px 0px 35px;
+	}
 	.choise__menu{
 		flex-direction: column;
 		align-items: center;
@@ -1003,5 +1006,55 @@ body{
 	}
 	.mentor__button{
 		margin-top: 20px;
+	}
+}
+
+@media screen and (max-width: 497px) {
+	.company__icon {
+		margin-left: 25px;
+	}
+	.company__icon:nth-child(4) {
+		margin-left: 0px;
+	}
+	.company__icon:nth-child(5) {
+		margin-left: 25px;
+	}
+}
+
+@media screen and (max-width: 429px) {
+	.__title {
+		font-size: 44px;
+    	line-height: 46px;
+	}
+	.text-content__title{
+		font-size: 61px;
+		line-height: 77px
+	}
+	.JS-list__title{
+		font-size: 15px;
+		line-height: 18px;
+	}
+	.JS__box{
+		width: 102px;
+		height: 39px;
+	}
+	.JS-list__choise{
+		font-size: 15px;
+	}
+	.mark-label{
+		margin-left: 19px;
+	}
+	.company__icon {
+		margin-left: 15px;
+	}
+	.text-content__text{
+		font-size: 17px;
+    	line-height: 28px;
+	}
+	.company__icon:nth-child(5) {
+		margin-left: 15px;
+	}
+	.company__icon:last-child {
+		margin-left: 15px;
 	}
 }
