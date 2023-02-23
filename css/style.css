@@ -825,11 +825,11 @@ body{
 		font-size: 14px;
 	}
 	.path21{
-		width: 110px;
+		width: 105px;
 	  	height: 46px;
 	}
 	.path2{
-	  	width: 110px;
+	  	width: 105px;
 	  	height: 46px;
 	}
 	.figura_main{
@@ -1012,6 +1012,9 @@ body{
 	}
 	.courses__body {
 	  	flex-direction: column;
+	}
+	.couses__card{
+		margin-right: 0;
 	}
 	.mentor__container{
 	  	margin-top: 70px;
